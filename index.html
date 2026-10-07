@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project - AI Workspace</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="m-0 font-sans text-gray-900">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="sticky top-0 z-50 bg-white border-b border-gray-200">
+
+        <div class="max-w-6xl h-16 mx-auto px-5 flex items-center justify-between">
+
+            <!-- Logo -->
+            <div class="text-xl font-bold">
+                ✦ Project
+            </div>
+
+            <!-- Navigation -->
+            <div class="hidden md:flex items-center gap-6">
+
+                <a href="#"
+                   class="text-sm text-gray-700 hover:text-orange-500">
+                    Product
+                </a>
+
+                <a href="#"
+                   class="text-sm text-gray-700 hover:text-orange-500">
+                    Solutions
+                </a>
+
+                <a href="#"
+                   class="text-sm text-gray-700 hover:text-orange-500">
+                    Resources
+                </a>
+
+                <a href="#"
+                   class="text-sm text-gray-700 hover:text-orange-500">
+                    Pricing
+                </a>
+
+                <a href="#"
+                   class="text-sm text-gray-700 hover:text-orange-500">
+                    Log in
+                </a>
+
+                <button
+                    onclick="getAI()"
+                    class="bg-gray-900 text-white text-sm px-4 py-2.5 rounded-md hover:bg-gray-700 transition">
+
+                    Get AI free
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section
+        class="min-h-screen pt-16 text-center overflow-hidden bg-gradient-to-b from-orange-50 via-orange-50/40 to-white">
+
+        <!-- Hero Content -->
+
+        <div class="max-w-4xl mx-auto px-5 py-5">
+
+            <h1
+                class="text-4xl md:text-5xl lg:text-[52px] leading-tight font-extrabold">
+
+                Write, plan, share.
+                <br>
+                With AI at your side.
+
+            </h1>
+
+            <p
+                class="max-w-2xl mx-auto mt-5 text-gray-500 text-base leading-7">
+
+                The connected workspace where teams write, plan,
+                and collaborate with powerful AI.
+
+            </p>
+
+
+            <!-- Buttons -->
+
+            <div
+                class="flex flex-col sm:flex-row justify-center items-center gap-3 mt-8">
+
+                <button
+                    onclick="getAI()"
+                    class="px-6 py-3 rounded-lg text-sm bg-gray-900 text-white border border-gray-900 hover:bg-gray-700 transition">
+
+                    Get AI free →
+
+                </button>
+
+                <button
+                    onclick="demo()"
+                    class="px-6 py-3 rounded-lg text-sm bg-white text-gray-900 border border-gray-300 hover:bg-gray-100 transition">
+
+                    Request a demo
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= DASHBOARD ================= -->
+
+        <div
+            class="relative max-w-5xl mx-auto mt-16 mb-24 px-5">
+
+
+            <!-- Dashboard -->
+
+            <div
+                class="relative z-10 bg-white border border-gray-200 rounded-xl overflow-hidden shadow-2xl text-left">
+
+
+                <!-- Dashboard Top -->
+
+                <div
+                    class="px-5 py-4 flex items-center justify-between border-b border-gray-200 text-sm">
+
+                    <b>
+                        Project
+                    </b>
+
+                    <div class="text-gray-400">
+                        ● ● ●
+                    </div>
+
+                </div>
+
+
+                <!-- ================= IMAGE AREA ================= -->
+
+                <div
+                    class="w-full p-4 md:p-5 bg-gray-50 border-b border-gray-200 text-center">
+
+                    <!--
+                        IMAGE PLACE
+                        Apni image yahan lagao.
+
+                        Example:
+                        assets/dashboard-image.jpg
+                    -->
+
+                    <img
+                        src="image.png"
+                        alt="Dashboard Image"
+                        class="w-full max-w-3xl h-48 md:h-64 object-cover mx-auto rounded-xl border border-gray-200">
+
+                </div>
+
+
+                <!-- ================= DASHBOARD BODY ================= -->
+
+                <div class="flex min-h-[300px]">
+
+
+                    <!-- Sidebar -->
+
+                    <div
+                        class="hidden sm:block w-44 md:w-48 p-6 border-r border-gray-200 text-sm">
+
+                        <b>
+                            Workspace
+                        </b>
+
+                        <p
+                            class="text-gray-500 mt-6 mb-5 cursor-pointer hover:text-gray-900">
+                            Overview
+                        </p>
+
+                        <p
+                            class="text-gray-500 my-5 cursor-pointer hover:text-gray-900">
+                            Tasks
+                        </p>
+
+                        <p
+                            class="text-gray-500 my-5 cursor-pointer hover:text-gray-900">
+                            Projects
+                        </p>
+
+                        <p
+                            class="text-gray-500 my-5 cursor-pointer hover:text-gray-900">
+                            Team
+                        </p>
+
+                    </div>
+
+
+                    <!-- Main -->
+
+                    <div class="flex-1 p-5 md:p-6">
+
+                        <h2 class="text-xl font-bold">
+                            Good morning 👋
+                        </h2>
+
+                        <p class="text-gray-400 text-sm mt-2">
+                            Here's what's happening today.
+                        </p>
+
+
+                        <!-- Cards -->
+
+                        <div
+                            class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-6">
+
+
+                            <!-- Task Card -->
+
+                            <div
+                                class="p-4 rounded-lg bg-orange-50 flex flex-col gap-2">
+
+                                <span class="text-xl">
+                                    📋
+                                </span>
+
+                                <b class="text-xs text-gray-600">
+                                    Tasks
+                                </b>
+
+                                <strong class="text-lg">
+                                    12
+                                </strong>
+
+                                <small class="text-green-600">
+                                    completed today
+                                </small>
+
+                            </div>
+
+
+                            <!-- Status Card -->
+
+                            <div
+                                class="p-4 rounded-lg bg-blue-50 flex flex-col gap-2">
+
+                                <span class="text-xl">
+                                    ✓
+                                </span>
+
+                                <b class="text-xs text-gray-600">
+                                    Project Status
+                                </b>
+
+                                <strong class="text-lg">
+                                    On Track
+                                </strong>
+
+                            </div>
+
+
+                            <!-- Team Card -->
+
+                            <div
+                                class="p-4 rounded-lg bg-purple-50 flex flex-col gap-2">
+
+                                <span class="text-xl">
+                                    👥
+                                </span>
+
+                                <b class="text-xs text-gray-600">
+                                    Team Activity
+                                </b>
+
+                                <strong class="text-lg">
+                                    +5 online
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Progress -->
+
+                        <div
+                            class="mt-5 border border-gray-200 p-5 rounded-lg">
+
+                            <div
+                                class="flex items-center justify-between text-sm">
+
+                                <b>
+                                    Project progress
+                                </b>
+
+                                <span>
+                                    78%
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="h-2 mt-3 bg-gray-200 rounded-full overflow-hidden">
+
+                                <div
+                                    class="w-[78%] h-full bg-gray-900 rounded-full">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= FLOATING CARDS ================= -->
+
+            <!-- Left Floating Card -->
+
+            <div
+                class="hidden lg:block absolute z-20 left-0 top-16 bg-white px-4 py-3 rounded-lg shadow-xl text-xs">
+
+                📋
+                <b>
+                    12 tasks completed today
+                </b>
+
+            </div>
+
+
+            <!-- Right Floating Card -->
+
+            <div
+                class="hidden lg:block absolute z-20 right-0 top-32 bg-white px-4 py-3 rounded-lg shadow-xl text-xs">
+
+                ✓
+                <b>
+                    On Track
+                </b>
+
+            </div>
+
+
+            <!-- Bottom Floating Card -->
+
+            <div
+                class="hidden md:block absolute z-20 -bottom-6 left-1/2 -translate-x-1/2 bg-white px-4 py-3 rounded-lg shadow-xl text-xs">
+
+                👥
+                <b>
+                    +5 online
+                </b>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CHAT BUTTON ================= -->
+
+    <!--
+        Tailwind fixed widget:
+        fixed bottom-6 right-6 z-50
+    -->
+
+    <button
+        onclick="openChat()"
+        class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-gray-900 text-white text-xl shadow-xl hover:bg-gray-700 transition">
+
+        💬
+
+    </button>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
